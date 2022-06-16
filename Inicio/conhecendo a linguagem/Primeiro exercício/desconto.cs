@@ -10,6 +10,5 @@ class Program {
   Console.WriteLine("O valor de desconsto será de: R$ {0}", D); 
   Console.WriteLine();
   Console.Write ("O valor total do produto com desconto é de: R$ {0}", PF);
-    
   }
 }
