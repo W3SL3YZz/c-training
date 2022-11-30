@@ -1,0 +1,41 @@
+﻿@page
+@model EntregaDoTeste.Pages.Clientes.IndexModel
+@{
+}
+
+<br />
+
+
+<h2> Lista de clientes</h2>
+
+
+<a class="btn btn-primary btn-sm" href="/Clientes/Create">Novo Cliente</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>email</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th>Data de criação</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.ListClients)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.email</td>
+                <td>@item.phone</td>
+                <td>@item.address</td>
+                <td>@item.created_at</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/Clientes/Edit?id=@item.id">Editar</a>
+                    <a class="btn btn-primary btn-sm" href="/Clientes/Delete?id=@item.id">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
